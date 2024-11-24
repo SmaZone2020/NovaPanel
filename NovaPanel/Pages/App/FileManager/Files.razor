@@ -1,0 +1,94 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@Check()
+@code {
+    int i = 0;
+    object Check()
+    {
+        if (HttpContextAccessor.HttpContext != null && i == 0)
+        {
+            if (!NovaPanel.Data.Auth.CookieCheck.IsSessionValid(HttpContextAccessor.HttpContext))
+            {
+                HttpContextAccessor.HttpContext.Response.StatusCode = 403;
+                HttpContextAccessor.HttpContext.Abort();
+                i = 1;
+            }
+        }
+        return null;
+    }
+}
+
+@page "/files/{path?}"
+<PageTitle>File Manager</PageTitle>
+
+<MContainer>
+    <h5>Path: @displayPath</h5>
+
+    <MRow>
+        @if (directories.Any())
+        {
+            @foreach (var dir in directories)
+            {
+                <MCol Cols="12" Sm="6" Md="4">
+                    <MCard Class="hoverable my-4" @onclick="() => NavigateToFolder(dir)">
+                        <MCardText>
+                            <h6>📁 @dir.Name</h6>
+                        </MCardText>
+                    </MCard>
+                </MCol>
+            }
+        }
+
+        @if (files.Any())
+        {
+            @foreach (var file in files)
+            {
+                <MCol Cols="12" Sm="6" Md="4">
+                    <MCard Class="my-4">
+                        <MCardText>
+                            <h6>📄 @file.Name</h6>
+                            <p>@file.Length / 1024 KB</p>
+                        </MCardText>
+                    </MCard>
+                </MCol>
+            }
+        }
+    </MRow>
+</MContainer>
+
+@code {
+    [Parameter] public string? path { get; set; }
+    private List<System.IO.DirectoryInfo> directories = new();
+    private List<System.IO.FileInfo> files = new();
+    private string displayPath = string.Empty;
+
+    protected override void OnParametersSet()
+    {
+        // 解析路径，默认为根路径
+        var rootPath = string.IsNullOrEmpty(path) ? "C:\\" : path.Replace("/", "\\");
+
+        try
+        {
+            // 更新路径显示
+            displayPath = rootPath;
+
+            // 获取文件夹和文件信息
+            var directoryInfo = new System.IO.DirectoryInfo(rootPath);
+            directories = directoryInfo.GetDirectories().ToList();
+            files = directoryInfo.GetFiles().ToList();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error accessing path {rootPath}: {ex.Message}");
+            directories.Clear();
+            files.Clear();
+        }
+    }
+
+    private void NavigateToFolder(System.IO.DirectoryInfo dir)
+    {
+        var newPath = dir.FullName.Replace("\\", "/");
+        NavigationManager.NavigateTo($"/files/{newPath}");
+    }
+
+    [Inject] NavigationManager NavigationManager { get; set; } = default!;
+}

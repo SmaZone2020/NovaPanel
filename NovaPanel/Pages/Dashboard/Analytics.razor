@@ -1,0 +1,182 @@
+﻿@page "/dashboard"
+
+@inject IHttpContextAccessor HttpContextAccessor
+@Check()
+@code {
+    int i = 0;
+    object Check()
+    {
+        if (HttpContextAccessor.HttpContext != null && i == 0)
+        {
+            if (!NovaPanel.Data.Auth.CookieCheck.IsSessionValid(HttpContextAccessor.HttpContext))
+            {
+                HttpContextAccessor.HttpContext.Response.StatusCode = 403;
+                HttpContextAccessor.HttpContext.Abort();
+                i = 1;
+            }
+        }
+        return null;
+    }
+}
+
+@using NovaPanel.Data.SystemAPI;
+@inherits ProComponentBase
+@inject SystemMonitorService MonitorService
+@using System.Timers;
+
+@Update()
+
+<PageTitle>Dashboard</PageTitle>
+
+<MCard>
+    <MRow>
+        <h5>CPU</h5>
+        <MCol Cols="18" Sm="4">
+            <MProgressCircular Value="MonitorService.CpuUsage" Color="@GetUsageColor(MonitorService.CpuUsage)" Size="150" LineWidth="10">
+                <div class="text-center">
+                    <span>@MonitorService.CpuUsage%</span>
+                </div>
+            </MProgressCircular>
+        </MCol>
+        <h5>RAM</h5>
+        <MCol Cols="12" Sm="4">
+            <MProgressCircular Value="MonitorService.RamUsagePercent" Color="@GetUsageColor(MonitorService.RamUsagePercent)" Size="150" LineWidth="10">
+                <div class="text-center">
+                    <p>@MonitorService.RamUsage.used / @MonitorService.RamUsage.total GB</p>
+                    <span>@Math.Round(MonitorService.RamUsagePercent, 2)%</span>
+                </div>
+            </MProgressCircular>
+        </MCol>
+    </MRow>
+</MCard>
+
+<br>
+
+<MCard>
+    <h5>Disk Device</h5>
+    <MRow>
+        @foreach (var disk in MonitorService.DiskUsages)
+        {
+            <MCol Cols="6" Sm="4">
+                <MCard>
+                    <MCardText>
+                        <h4>@disk.drive</h4>
+                        <MProgressCircular Value="@disk.usagePercent" Color="@GetUsageColor(disk.usagePercent)" Size="140" LineWidth="10">
+                            <div class="text-center">
+                                <span>@disk.usagePercent%</span>
+                                <p>@disk.used / @disk.total GB</p>
+                            </div>
+                        </MProgressCircular>
+                    </MCardText>
+                </MCard>
+            </MCol>
+        }
+    </MRow>
+</MCard>
+
+<br>
+
+<MCard>
+    <MECharts Option="cpuChartOption" InitOptions="opt => opt.Locale = locale" Width="@("100%")" MinHeight="300" @ref="cpuChart">
+    </MECharts>
+</MCard>
+
+<br>
+
+<MCard>
+    <MECharts Option="ramChartOption" InitOptions="opt => opt.Locale = locale" Width="@("100%")" MinHeight="300" @ref="ramChart">
+    </MECharts>
+</MCard>
+
+@code {
+
+    private string locale = "en";
+    private MECharts? cpuChart;
+    private MECharts? ramChart;
+
+    private object cpuChartOption = new();
+    private object ramChartOption = new();
+
+    private Timer? updateTimer;
+
+    object Update()
+    {
+        locale = I18n.Culture.TwoLetterISOLanguageName;
+
+        cpuChartOption = CreateChartOption("CPU Usage Over Time", MonitorService.CpuUsageHistory);
+        ramChartOption = CreateChartOption("RAM Usage Over Time", MonitorService.RamUsageHistory);
+
+        updateTimer = new Timer(1000);
+        updateTimer.Elapsed += UpdateCharts;
+        updateTimer.Start();
+        return null;
+    }
+
+    private void UpdateCharts(object? sender, ElapsedEventArgs e)
+    {
+        cpuChartOption = CreateChartOption("CPU Usage Over Time", MonitorService.CpuUsageHistory);
+        ramChartOption = CreateChartOption("RAM Usage Over Time", MonitorService.RamUsageHistory);
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    private object CreateChartOption(string title, List<UsageTimeItem> data)
+    {
+        return new
+        {
+            title = new
+            {
+                text = title
+            },
+            tooltip = new
+            {
+                trigger = "axis",
+                axisPointer = new
+                {
+                    type = "line"
+                }
+            },
+            xAxis = new
+            {
+                type = "category",
+                data = data.Select(d => d.Time.ToString("HH:mm:ss")).ToArray()
+            },
+            yAxis = new
+            {
+                type = "value"
+            },
+            series = new object[]
+            {
+                new
+                {
+                    name = title,
+                    type = "line",
+                    data = data.Select(d => d.Value).ToArray(),
+                    smooth = true
+                }
+            }
+        };
+    }
+
+    private string GetUsageColor(double usage)
+    {
+        return usage switch
+        {
+            0 => "green",
+            < 30 => "green",
+            < 70 => "blue",
+            < 90 => "yellow",
+            _ => "red"
+        };
+    }
+
+    public void Dispose()
+    {
+        updateTimer?.Dispose();
+    }
+
+}
+
+
+
+

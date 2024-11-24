@@ -1,0 +1,465 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\css\\all.min.css"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\fontawesome\\v6.4.0\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\v6.4.0\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\masa-blazor-pro.css",
+      "PackagePath": "staticwebassets\\css\\masa-blazor-pro.css"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\material\\flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2",
+      "PackagePath": "staticwebassets\\css\\material\\flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\material\\icons.css",
+      "PackagePath": "staticwebassets\\css\\material\\icons.css"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\materialdesign\\v7.1.96\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\css\\materialdesign\\v7.1.96\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\materialdesign\\v7.1.96\\css\\materialdesignicons.min.css.map",
+      "PackagePath": "staticwebassets\\css\\materialdesign\\v7.1.96\\css\\materialdesignicons.min.css.map"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\materialdesign\\v7.1.96\\fonts\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\css\\materialdesign\\v7.1.96\\fonts\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\materialdesign\\v7.1.96\\fonts\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\css\\materialdesign\\v7.1.96\\fonts\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\materialdesign\\v7.1.96\\fonts\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\css\\materialdesign\\v7.1.96\\fonts\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\materialdesign\\v7.1.96\\fonts\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\css\\materialdesign\\v7.1.96\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\i18n\\en-US.json",
+      "PackagePath": "staticwebassets\\i18n\\en-US.json"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\i18n\\supportedCultures.json",
+      "PackagePath": "staticwebassets\\i18n\\supportedCultures.json"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\i18n\\zh-CN.json",
+      "PackagePath": "staticwebassets\\i18n\\zh-CN.json"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\analytics\\json.png",
+      "PackagePath": "staticwebassets\\img\\analytics\\json.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\analytics\\left.png",
+      "PackagePath": "staticwebassets\\img\\analytics\\left.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\analytics\\right.png",
+      "PackagePath": "staticwebassets\\img\\analytics\\right.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\1.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\1.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\1.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\10.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\10.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\10.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\10.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\11.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\11.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\11.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\11.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\12.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\12.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\12.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\12.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\13.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\13.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\13.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\13.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\14.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\14.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\14.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\14.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\15.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\15.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\15.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\15.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\16.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\16.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\16.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\16.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\17.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\17.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\17.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\17.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\18.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\18.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\18.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\18.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\19.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\19.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\19.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\19.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\2.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\2.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\2.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\20.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\20.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\20.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\20.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\21.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\21.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\21.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\21.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\22.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\22.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\22.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\22.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\23.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\23.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\23.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\23.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\24.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\24.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\24.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\24.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\25.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\25.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\25.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\25.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\26.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\26.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\26.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\26.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\27.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\27.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\27.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\27.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\28.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\28.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\29.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\29.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\3.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\3.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\3.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\30.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\30.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\31.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\31.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\32.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\32.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\4.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\4.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\4.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\5.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\5.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\5.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\6.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\6.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\6.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\7.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\7.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\7.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\7.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\8.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\8.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\8.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\8.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\9.jpg",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\9.jpg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\apps-eCommerce\\9.png",
+      "PackagePath": "staticwebassets\\img\\apps-eCommerce\\9.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\auth\\forgot-password-v2.9faba3c1.svg",
+      "PackagePath": "staticwebassets\\img\\auth\\forgot-password-v2.9faba3c1.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\auth\\register-v2.0a9e487c.svg",
+      "PackagePath": "staticwebassets\\img\\auth\\register-v2.0a9e487c.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\1.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\1.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\10.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\10.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\11.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\11.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\12.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\12.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\13.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\13.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\14.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\14.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\2.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\2.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\3.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\3.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\4.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\4.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\7.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\7.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\8.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\8.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\avatar\\9.svg",
+      "PackagePath": "staticwebassets\\img\\avatar\\9.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\login\\2873.png",
+      "PackagePath": "staticwebassets\\img\\login\\2873.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\login\\Gxwd.png",
+      "PackagePath": "staticwebassets\\img\\login\\Gxwd.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\login\\left.svg",
+      "PackagePath": "staticwebassets\\img\\login\\left.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\mainLayout\\logo-en.svg",
+      "PackagePath": "staticwebassets\\img\\mainLayout\\logo-en.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\mainLayout\\logo.svg",
+      "PackagePath": "staticwebassets\\img\\mainLayout\\logo.svg"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\status\\401.png",
+      "PackagePath": "staticwebassets\\img\\status\\401.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\status\\404.png",
+      "PackagePath": "staticwebassets\\img\\status\\404.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\img\\status\\500.png",
+      "PackagePath": "staticwebassets\\img\\status\\500.png"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\js\\echarts\\5.1.1\\echarts.min.js",
+      "PackagePath": "staticwebassets\\js\\echarts\\5.1.1\\echarts.min.js"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\js\\swal\\swal.js",
+      "PackagePath": "staticwebassets\\js\\swal\\swal.js"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\nav\\nav.json",
+      "PackagePath": "staticwebassets\\nav\\nav.json"
+    },
+    {
+      "Id": "E:\\repo\\Project\\N0v4P4n31\\NovaPanel\\wwwroot\\nav\\nav1.txt",
+      "PackagePath": "staticwebassets\\nav\\nav1.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0-windows\\staticwebassets\\msbuild.NovaPanel.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0-windows\\staticwebassets\\msbuild.build.NovaPanel.props",
+      "PackagePath": "build\\NovaPanel.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0-windows\\staticwebassets\\msbuild.buildMultiTargeting.NovaPanel.props",
+      "PackagePath": "buildMultiTargeting\\NovaPanel.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0-windows\\staticwebassets\\msbuild.buildTransitive.NovaPanel.props",
+      "PackagePath": "buildTransitive\\NovaPanel.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

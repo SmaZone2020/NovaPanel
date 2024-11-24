@@ -1,0 +1,99 @@
+﻿@page "/demo"
+
+@using NovaPanel.Data.SystemAPI;
+@inherits ProComponentBase;
+@inject SystemMonitorService MonitorService;
+@using System.Timers;
+
+<h3>System Usage Demo</h3>
+
+<MCard>
+    <h5>CPU Usage Timeline</h5>
+    <MECharts Option="cpuChartOption" InitOptions="opt => opt.Locale = locale" Width="@("100%")" MinHeight="300" @ref="cpuChart">
+    </MECharts>
+</MCard>
+
+<MCard>
+    <h5>RAM Usage Timeline</h5>
+    <MECharts Option="ramChartOption" InitOptions="opt => opt.Locale = locale" Width="@("100%")" MinHeight="300" @ref="ramChart">
+    </MECharts>
+</MCard>
+
+@code {
+    private string locale = "en";
+    private MECharts? cpuChart;
+    private MECharts? ramChart;
+
+    private object cpuChartOption = new();
+    private object ramChartOption = new();
+
+    private Timer? updateTimer;
+
+    protected override void OnInitialized()
+    {
+        locale = I18n.Culture.TwoLetterISOLanguageName;
+
+        // Initialize chart options
+        cpuChartOption = CreateChartOption("CPU Usage Over Time", MonitorService.CpuUsageHistory);
+        ramChartOption = CreateChartOption("RAM Usage Over Time", MonitorService.RamUsageHistory);
+
+        // Start a timer to update the chart data every second
+        updateTimer = new Timer(1000);
+        updateTimer.Elapsed += UpdateCharts;
+        updateTimer.Start();
+    }
+
+    private void UpdateCharts(object? sender, ElapsedEventArgs e)
+    {
+        // Update CPU chart
+        cpuChartOption = CreateChartOption("CPU Usage Over Time", MonitorService.CpuUsageHistory);
+
+        // Update RAM chart
+        ramChartOption = CreateChartOption("RAM Usage Over Time", MonitorService.RamUsageHistory);
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    private object CreateChartOption(string title, List<UsageTimeItem> data)
+    {
+        return new
+        {
+            title = new
+            {
+                text = title
+            },
+            tooltip = new
+            {
+                trigger = "axis",
+                axisPointer = new
+                {
+                    type = "line"
+                }
+            },
+            xAxis = new
+            {
+                type = "category",
+                data = data.Select(d => d.Time.ToString("HH:mm:ss")).ToArray()
+            },
+            yAxis = new
+            {
+                type = "value"
+            },
+            series = new object[]
+            {
+                new
+                {
+                    name = title,
+                    type = "line",
+                    data = data.Select(d => d.Value).ToArray(),
+                    smooth = true
+                }
+            }
+        };
+    }
+
+    public void Dispose()
+    {
+        updateTimer?.Dispose();
+    }
+}

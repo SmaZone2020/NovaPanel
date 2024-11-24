@@ -1,0 +1,33 @@
+﻿@page "/"
+
+@inject IHttpContextAccessor HttpContextAccessor
+@Check()
+@code {
+    int i = 0;
+    object Check()
+    {
+        if (HttpContextAccessor.HttpContext != null && i == 0)
+        {
+            if (!NovaPanel.Data.Auth.CookieCheck.IsSessionValid(HttpContextAccessor.HttpContext))
+            {
+                HttpContextAccessor.HttpContext.Response.StatusCode = 403;
+                HttpContextAccessor.HttpContext.Abort();
+                i = 1;
+            }
+        }
+        return null;
+    }
+}
+
+@inherits LayoutComponentBase
+@inject NavigationManager Nav
+
+@code {
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if(firstRender)
+        {
+            Nav.NavigateTo("/dashboard", true);
+        }
+    }
+}

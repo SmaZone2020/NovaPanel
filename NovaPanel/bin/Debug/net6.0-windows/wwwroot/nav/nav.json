@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Title": "Dashboard",
+    "Icon": "mdi-trending-up",
+    "Href": "dashboard",
+    "Target": "Self"
+  },
+  {
+    "Id": 2,
+    "Title": "FileManager",
+    "Icon": "mdi-file",
+    "Href": "manager",
+    "Target": "Self"
+  },
+  {
+    "Id": 3,
+    "Title": "Todo",
+    "Icon": "mdi-calendar-check-outline",
+    "Href": "app/todo",
+    "Target": "Self"
+  }
+]

@@ -1,0 +1,123 @@
+﻿<MCard Width=510 Height=680 Class="mx-auto my-auto">
+    <div style="height:60px;"></div>
+    <div class="mt-2 mx-auto text-center" style="width:420px;">
+        <MAvatar Size=80>
+            <MImage Src="/img/avatar/1.svg"></MImage>
+        </MAvatar>
+        <h5 class="mt-2 mb-12">Welcome to NovaPanel! 👋</h5>
+
+        <MTextField TValue="string"
+                    Label="UserName"
+                    Placeholder="novaPanel"
+                    Outlined
+                    HideDetails="@("auto")"
+                    @bind-Value="username">
+        </MTextField>
+
+        <MTextField TValue="string"
+                    Class="mt-10"
+                    Label="Password"
+                    Type="@(_show ? "text" : "password")"
+                    Placeholder="Enter your password"
+                    AppendIcon="@(_show ? "mdi-eye" : "mdi-eye-off")"
+                    OnAppendClick="() => _show = !_show"
+                    Outlined
+                    HideDetails="@("auto")"
+                    @bind-Value="password">
+        </MTextField>
+
+        <span class="d-flex justify-end mt-1 text-caption hover-pointer">
+            Forgot Password
+        </span>
+
+        <MButton Class="mt-11 rounded-4 text-btn white--text" OnClick="CLogin" Height=46 Width=340 Color="primary">Login</MButton>
+
+    </div>
+</MCard>
+
+@using System;
+@using System.Data.SQLite;
+@using System.Security.Cryptography;
+@using System.Text;
+@using System.Threading.Tasks;
+
+@inject IJSRuntime JSRuntime
+
+@code {
+
+    private string username;
+    private string password;
+
+
+    private async Task CLogin()
+    {
+        if (username.Length > 5 && password.Length > 5)
+        {
+            var loginSuccess = await AuthenticateUserAsync(username, password);
+
+            if (loginSuccess)
+            {
+                await JSRuntime.InvokeVoidAsync("setSessionCookie",
+                NovaPanel.Data.Auth.CookieCheck.GenerateSessionCode(username, password));
+                await JSRuntime.InvokeVoidAsync("swal", "Success", "You're logged in", "success");
+            }
+            else
+            {
+                await JSRuntime.InvokeVoidAsync("swal", "Unable to log in", "Please check your account number and password", "error");
+            }
+        }
+        else
+        {
+            await JSRuntime.InvokeVoidAsync("swal", "Unable to log in", "Please check your account number and password", "error");
+        }
+
+    }
+
+
+    // 登录验证
+    public async Task<bool> AuthenticateUserAsync(string username, string password)
+    {
+        var hashedPassword = Setting.GetMd5Hash(password);
+        var hashedUsername = Setting.GetMd5Hash(username);
+
+        var user = GetUserFromDatabase(hashedUsername);
+        if (user.usw != null && user.psw == hashedPassword)
+        {
+            Console.WriteLine($"usw  {username} / {hashedUsername}");
+            Console.WriteLine("登陆成功.");
+            return true;
+        }
+
+        return false;
+    }
+
+    // 查询数据库获取用户信息
+    private (string usw,string psw) GetUserFromDatabase(string username)
+    {
+        using (SQLiteConnection connection = new SQLiteConnection($"Data Source={Setting.DataBaseFile};Version=3;"))
+        {
+            connection.Open();
+
+            string query = "SELECT Username, Password FROM Users WHERE Username = @username";
+
+            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@username", username);
+
+                using (SQLiteDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new
+                            (
+                                reader["Username"].ToString(),
+                                reader["Password"].ToString() // 假设数据库存储的是密码的MD5值
+                            );
+                    }
+                }
+            }
+        }
+
+        return ("none","null"); // 没有用户
+    }
+}

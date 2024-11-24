@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Masa.Blazor.props" />
+</Project>

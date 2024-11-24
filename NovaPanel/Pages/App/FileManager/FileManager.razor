@@ -1,0 +1,57 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@Check()
+@code {
+    int i = 0;
+    object Check()
+    {
+        if (HttpContextAccessor.HttpContext != null && i == 0)
+        {
+            if (!NovaPanel.Data.Auth.CookieCheck.IsSessionValid(HttpContextAccessor.HttpContext))
+            {
+                HttpContextAccessor.HttpContext.Response.StatusCode = 403;
+                HttpContextAccessor.HttpContext.Abort();
+                i = 1;
+            }
+        }
+        return null;
+    }
+}
+
+@page "/page"
+<PageTitle>Disks</PageTitle>
+
+<MContainer>
+    <MRow>
+        @foreach (var disk in disks)
+        {
+            <MCol Cols="12" Sm="6" Md="4">
+                <MCard Class="hoverable my-4" @onclick="() => NavigateToDisk(disk)">
+                    <MCardText>
+                        <h5>@disk</h5>
+                    </MCardText>
+                </MCard>
+            </MCol>
+        }
+    </MRow>
+</MContainer>
+
+@code {
+    private List<string> disks = new();
+
+    protected override void OnInitialized()
+    {
+        // 获取系统中的磁盘
+        disks = System.IO.DriveInfo.GetDrives()
+            .Where(d => d.IsReady)
+            .Select(d => d.Name)
+            .ToList();
+    }
+
+    private void NavigateToDisk(string disk)
+    {
+        NavigationManager.NavigateTo($"/files/{disk.Replace("\\", "")}");
+    }
+
+    [Inject] NavigationManager NavigationManager { get; set; } = default!;
+}
+
